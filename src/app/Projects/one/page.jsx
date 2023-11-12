@@ -21,7 +21,7 @@ export default function Home() {
         
         </a>{" "}
         <br />
-        <a href="" target="_blank" className={styles.dronelinks}>
+        <a href="http://3.111.75.102:81/" target="_blank" className={styles.dronelinks}>
           
             click to check out the live project
          
