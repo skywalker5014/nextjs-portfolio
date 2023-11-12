@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className={styles.dronelinks}>
         <a
-          href="https://github.com/skywalker5014/Droneshop"
+          href="https://github.com/skywalker5014/nextjs-portfolio"
           target="_blank"
           className={styles.dronelinks}
         >
