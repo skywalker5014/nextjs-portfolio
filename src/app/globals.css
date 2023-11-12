@@ -1,0 +1,14 @@
+a{
+  color: white;
+  text-decoration: none;
+  transition: ease-in 1ms;
+}
+
+a:hover{
+  color:rgb(0, 255, 153);
+}
+
+body{
+  background-color: black;
+  color: white;
+}

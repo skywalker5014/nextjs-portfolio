@@ -1,0 +1,239 @@
+.main{
+    border: 1px solid black;
+    padding: 10px;
+    height: 600px;
+}
+
+.homecontainer{
+    display: grid;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    gap: 10px;
+}
+
+.card{
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+    transition: ease 500ms;
+    color: rgb(5, 182, 5);
+}
+
+.card:hover{
+    transform: translateY(-10px);    
+}
+
+.card span{
+    transition: ease 1s;
+}
+.card:hover span{
+    color: red;
+    animation: linear 1s infinite alternate-reverse alternate;
+}
+
+.card::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .card:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+ .card::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: hsla(180, 1%, 28%, 0.4);
+    border-radius: 10px;
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  
+
+
+.center{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    background-image: url('/matrix.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.socials{
+    display: flex;
+    gap: 10px;
+}
+
+.socials a{
+    padding: 10px;
+    border-radius: 50px;
+}
+.socials a:hover{
+    box-shadow: 1px 1px 1px 1px red;
+    background-color: rgba(0, 255, 34, 0.2);
+}
+
+.logo b{
+    box-shadow: 1px 1px 1px 1px red;
+    padding: 5px;
+}
+
+.center section{
+    padding: 25px;
+}
+
+.profile{
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.profile p{
+    line-height: 1.6rem;
+    font-size: large;
+    text-align: justify;
+}
+
+.skills{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skills p{
+    border: 2px solid gold;
+    padding: 20px;
+    border-radius: 2px;
+}
+
+.skills p span{
+    color: rgb(39, 130, 222);
+}
+
+.contacts{
+    display: grid;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.contacts p{
+    border: 2px solid gold;
+    border-radius: 2px;
+    padding: 20px;
+    font-size: large;
+    line-height: 2rem;
+}
+
+.contacts button{
+    box-shadow: 1px 1px 1px 1px rgb(0, 166, 255);
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+}
+
+.projects{
+    display: grid;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.projects a{
+    padding: 10px;
+    transition: box-shadow ease-in 500ms;
+}
+
+.projects span{
+    color: rgb(0, 187, 255);
+}
+
+.projects a:hover{
+    box-shadow: 1px 1px 1px 1px red;
+}
+
+.droneview{
+    display: grid;
+    padding: 20px;
+    justify-items: center;
+    line-height: 1.6rem;
+}
+
+.dronelinks{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.dronelinks a{
+    border: 1px solid rgb(0, 102, 255);
+    padding: 10px;
+}
+
+.dronelinks a:hover{
+    box-shadow: 2px 2px 2px 2px rgb(0, 102, 255);
+    transform: translateY(-5px);
+}
+
+
+
+
+
+@media (max-width: 1200px){
+
+    .center section{
+        padding: none;
+        background-image: url('/matrix.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .center{
+        background-image: none;
+    }
+
+    .box{
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+        font-size: large;
+    }
+
+    .profile p{
+        line-height: 1.6rem;
+        font-size: medium;
+        text-align:justify ;
+    }
+
+    .skills p{
+        border-radius: 2px;
+        line-height: 1.6rem;
+    }
+
+    .contacts{
+        margin-top: 100px;
+    }
+
+    .contacts p{
+        font-size: x-large;
+    }
+
+    .droneview div img{
+        max-width: 100%;
+        min-width: 300px;
+        height: auto;
+        object-fit:cover;
+    }
+
+
+}
