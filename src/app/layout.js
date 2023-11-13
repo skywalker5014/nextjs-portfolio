@@ -11,13 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZLN4NFHGP"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=`${process.env.GOOGLE_ANALYTICS_ID}`"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-CZLN4NFHGP');
+  gtag('config', `${process.env.GOOGLE_ANALYTICS_ID}`);
 </script>
       <body className={inter.className}>{children}</body>
     </html>
