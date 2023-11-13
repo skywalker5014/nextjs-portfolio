@@ -1,9 +1,23 @@
 import Image from "next/image";
 import styles from "../../page.module.css";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function Home() {
   return (
+    <>
+    <div className="container">
+    <Script src="https://www.googletagmanager.com/gtag/js?id=G-CZLN4NFHGP" />
+    <Script id="google-analytics">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CZLN4NFHGP');
+      `}
+    </Script>
+  </div>
     <main className={styles.main}>
       <div className={styles.logo}>
         <Link href="/">
@@ -56,5 +70,6 @@ export default function Home() {
         </Link>
       </div>
     </main>
+    </>
   );
 }
